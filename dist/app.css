@@ -138,11 +138,35 @@
   height: 80px;
   background-color: #080b12;
   float: left;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+.hightbar-upgrade1 {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 5px 25px;
+}
+.hightbar-upgrade2 {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 5px 25px;
+  display: none;
+}
+.hightbar > div:hover {
+  font-weight: bold;
+  padding: 8px 30px;
 }
 
 @media screen and (max-width: 768px) {
   .hightbar {
     width: calc(100% - 60px);
+  }
+  .hightbar-upgrade1 {
+    display: none;
+  }
+  .hightbar-upgrade2 {
+    display: block;
   }
 }
 .content {

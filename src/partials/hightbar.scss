@@ -3,15 +3,36 @@
     height: 80px;
     background-color: #080b12;
     float: left;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    &-upgrade1{
+        border: 1px solid #fff;
+        border-radius: 20px;
+        padding: 5px 25px;
+    }
+    &-upgrade2{
+        border: 1px solid #fff;
+        border-radius: 20px;
+        padding: 5px 25px;
+        display: none;
+    }
+    >div:hover{
+        font-weight: bold;
+        padding: 8px 30px;
+    }
 }
 
-
-
+// smartphone
 @media screen and (max-width: 768px){
 .hightbar{
     width: calc(100% - 60px);
+    &-upgrade1{
+        display: none;
+    }
+    &-upgrade2{
+        display: block;
+    }
 }
 }
-// @media screen and (min-width: 769px) and (max-width: 991px){
-
-// }
+// /smartphone
