@@ -12,16 +12,30 @@
 .container{
     width: 100vw;
     height: 100vh;
-    background-color: red;
     &:after{
         display: table;
         content: "";
         clear: both;
     }
 }
-
-
-
+.color-gray{
+    color: #a3a3a3;
+}
+.color-white{
+    color: #fff;
+}
+.flex{
+    display: flex;
+}
+.bold{
+    font-weight: bold;
+}
+.cursor{
+    cursor: pointer;
+}
+.adapt{
+    width: fit-content;
+}
 // @media screen and (max-width: 768px){
 
 // }

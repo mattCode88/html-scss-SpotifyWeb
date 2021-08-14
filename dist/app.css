@@ -2,9 +2,137 @@
   width: 200px;
   height: calc(100% - 80px);
   background-color: #000;
+  color: #a3a3a3;
   float: left;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 10px;
+}
+.sidebar-top {
+  height: calc(100% - 71px);
+  overflow-y: hidden;
+}
+.sidebar-top i {
+  font-size: 16px;
+}
+.sidebar-top-logo {
+  align-items: center;
+  margin: 0 0 5px 10px;
+}
+.sidebar-top-logo img {
+  width: 50px;
+}
+.sidebar-top-logo > div {
+  font-size: 20px;
+}
+.sidebar-top-search > div {
+  height: 25px;
+  align-items: center;
+}
+.sidebar-top-search > div span {
+  padding-left: 10px;
+}
+.sidebar-top-search-home {
+  border-left: 2px solid #b3ff34;
+  padding-left: 18px;
+}
+.sidebar-top-search-research, .sidebar-top-search-library {
+  padding-left: 20px;
+}
+.sidebar-top-search-research:hover, .sidebar-top-search-library:hover {
+  border-left: 2px solid #b3ff34;
+  padding-left: 18px;
+  color: #fff;
+}
+.sidebar-top-playlist {
+  padding: 10px 0 5px 20px;
+}
+.sidebar-top-playlist-logo {
+  align-items: center;
+  padding-top: 5px;
+  cursor: pointer;
+}
+.sidebar-top-playlist-logo img {
+  width: 30px;
+}
+.sidebar-top-playlist-logo div {
+  padding-left: 5px;
+  font-size: 12px;
+}
+.sidebar-top-playlist-logo div:hover {
+  color: #fff;
+}
+.sidebar-top-list {
+  padding: 10px 0 0 20px;
+  overflow-y: auto;
+  height: calc(100% - 180px);
+}
+.sidebar-top-list > div {
+  padding-bottom: 10px;
+}
+.sidebar-top-list > div:hover {
+  color: #fff;
+}
+.sidebar-bottom {
+  padding-left: 20px;
+  background-color: #000;
+}
+.sidebar-bottom-top {
+  height: 30px;
+  line-height: 30px;
+  width: 90%;
+  border-bottom: 1px solid #fff;
+}
+.sidebar-bottom-top:hover {
+  color: #fff;
+}
+.sidebar-bottom-bottom {
+  height: 40px;
+  line-height: 40px;
+}
+.sidebar-bottom-bottom i {
+  font-size: 16px;
+}
+.sidebar-top1, .sidebar-bottom1 {
+  display: none;
 }
 
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+  .sidebar-top, .sidebar-bottom {
+    display: none;
+  }
+  .sidebar-top1, .sidebar-bottom1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sidebar-top1 img {
+    width: 40px;
+    padding: 10px 0 15px 0;
+  }
+  .sidebar-top1 i {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+  .sidebar-top1 i:hover {
+    color: #fff;
+  }
+  .sidebar-bottom1 > div {
+    width: 33px;
+    background-color: #a3a3a3;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 20px;
+    margin: 15px 0 10px 0;
+    text-align: center;
+  }
+  .sidebar-bottom1 > i:hover {
+    color: #fff;
+  }
+}
 .hightbar {
   width: calc(100% - 200px);
   height: 80px;
@@ -12,6 +140,11 @@
   float: left;
 }
 
+@media screen and (max-width: 768px) {
+  .hightbar {
+    width: calc(100% - 60px);
+  }
+}
 .content {
   width: calc(100% - 200px);
   height: calc(100% - 160px);
@@ -19,6 +152,11 @@
   float: left;
 }
 
+@media screen and (max-width: 768px) {
+  .content {
+    width: calc(100% - 60px);
+  }
+}
 .lowbar {
   position: fixed;
   top: calc(100% - 80px);
@@ -37,10 +175,35 @@
 .container {
   width: 100vw;
   height: 100vh;
-  background-color: red;
 }
 .container:after {
   display: table;
   content: "";
   clear: both;
+}
+
+.color-gray {
+  color: #a3a3a3;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.flex {
+  display: flex;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.adapt {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
