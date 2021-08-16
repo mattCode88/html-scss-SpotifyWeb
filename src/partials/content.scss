@@ -3,17 +3,161 @@
     height: calc(100% - 160px);
     background-color: #151922;
     float: left;
+    overflow-y: auto;
+    &-top{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 50px;
+        >div{
+            padding: 15px;
+            position: relative;
+            font-size: 12px;
+            >div{
+                position: absolute;
+                bottom: 5px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 20px;
+                border-bottom: 2px solid #b3ff34;
+            }
+            .hidden{
+                display: none;
+            }
+        }
+        >div:hover{
+            color: #fff;
+            font-weight: bold;
+            .hidden{
+                display: block;
+            }
+        }
+    }
+    &-bottom{
+        padding: 30px 20px;
+        &-container{
+            width: 100%;
+            padding-top: 20px;
+            flex-wrap: wrap;
+            &-scheda{
+                width: calc((100% - 75px) / 6);
+                >div:first-of-type{
+                    position: relative;
+                    width: 100%;
+                    >img{
+                        width: 100%;
+                    }
+                    i{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 50px;
+                        display: none;
+                    }
+                    >div{
+                        width: 100%;
+                        background-color: #000;
+                        opacity: 0.8;
+                    }
+                }
+                >div:first-of-type:hover{
+                    >i{
+                        display: block;
+                    }
+                    >img{
+                        opacity: 0.3;
+                    }
+                }
+                h4{
+                    text-align: center;
+                    padding: 10px 0 5px 0;
+                }
+                >div:nth-of-type(2){
+                    font-size: 10px;
+                    text-align: center;
+                }
+            }
+            &-scheda:nth-of-type(2), &-scheda:nth-of-type(3), &-scheda:nth-of-type(4), &-scheda:nth-of-type(5), &-scheda:nth-of-type(6){
+                margin-left: 15px;
+            } 
+        }
+        h2:nth-of-type(2), h2:nth-of-type(3){
+            padding-top: 30px;
+        }
+        p{
+            font-size: 10px;
+            padding-top: 5px;
+        }
+    }
 }
 
-
-
-
-
+// smartphone
 @media screen and (max-width: 768px){
 .content{
     width: calc(100% - 60px);
+    &-top{
+        padding: 0 20px;
+    }
+    &-bottom{
+        &-container{
+            &-scheda{
+                width: calc((100% - 15px) / 2);
+            }
+            &-scheda:nth-of-type(3), &-scheda:nth-of-type(5){
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            &-scheda:nth-of-type(4), &-scheda:nth-of-type(6){
+                margin-top: 15px;
+            }
+            &-scheda:nth-of-type(6){
+                margin-left: 15px;
+            }
+        }
+    }
 }
 }
-// @media screen and (min-width: 769px) and (max-width: 991px){
+// /smartphone
 
-// }
+// tablet
+@media screen and (min-width: 769px) and (max-width: 991px){
+.content-bottom{
+    &-container{
+        &-scheda{
+            width: calc((100% - 15px) / 2);
+        }
+        &-scheda:nth-of-type(3), &-scheda:nth-of-type(5){
+            margin-left: 0;
+            margin-top: 15px;
+        }
+        &-scheda:nth-of-type(4), &-scheda:nth-of-type(6){
+            margin-top: 15px;
+        }
+        &-scheda:nth-of-type(6){
+            margin-left: 15px;
+        }
+    }
+}
+}
+// tablet
+
+// pc piccoli
+@media screen and (min-width: 992px) and (max-width: 1199px){
+.content-bottom{
+    &-container{
+        &-scheda{
+            width: calc((100% - 50px) / 4);
+        }
+        &-scheda:nth-of-type(5){
+            margin-left: 0;
+            margin-top: 15px;
+        }
+        &-scheda:nth-of-type(6){
+            margin-top: 15px;
+        }
+    }
+}
+}
+// /pc piccoli
