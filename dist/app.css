@@ -321,7 +321,6 @@
 .lowbar-left, .lowbar-right {
   width: 25%;
   height: 100%;
-  background-color: red;
   align-items: center;
 }
 .lowbar-left > img {
@@ -339,6 +338,9 @@
 }
 .lowbar-left i:hover, .lowbar-left > div:first-of-type > div:hover {
   color: #fff;
+}
+.lowbar-left i:first-of-type {
+  padding-right: 7px;
 }
 .lowbar-center {
   width: 50%;
@@ -378,19 +380,31 @@
 }
 .lowbar-center-bottom-line {
   width: 60%;
-  border-bottom: 1.5px solid #a3a3a3;
+  border-bottom: 2px solid #a3a3a3;
   position: relative;
 }
 .lowbar-center-bottom-line > div:first-of-type {
   width: 30%;
-  border-bottom: 1.5px solid #fff;
+  border-bottom: 2px solid #fff;
   position: absolute;
   top: 0;
   left: 0;
 }
+.lowbar-center-bottom-line > div:last-of-type {
+  height: 7px;
+  width: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -2.5px;
+  left: 30%;
+  display: none;
+}
 .lowbar-center-bottom-line:hover > div:first-of-type {
-  top: -0.5px;
   border-bottom: 2px solid #b3ff34;
+}
+.lowbar-center-bottom-line:hover > div:last-of-type {
+  display: block;
 }
 .lowbar-center-bottom > div.color-white {
   font-size: 10px;
@@ -401,6 +415,46 @@
 .lowbar-center-bottom > div.color-white:last-of-type {
   padding-left: 20px;
 }
+.lowbar-right {
+  justify-content: flex-end;
+}
+.lowbar-right i {
+  color: #a3a3a3;
+  padding-right: 10px;
+  font-size: 12px;
+}
+.lowbar-right i:hover {
+  color: #fff;
+}
+.lowbar-right-line {
+  width: 60%;
+  border-bottom: 2px solid #a3a3a3;
+  position: relative;
+}
+.lowbar-right-line > div:first-of-type {
+  width: 30%;
+  border-bottom: 2px solid #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.lowbar-right-line > div:last-of-type {
+  height: 7px;
+  width: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -2.5px;
+  left: 30%;
+  display: none;
+}
+.lowbar-right-line:hover > div:first-of-type {
+  border-bottom: 2px solid #b3ff34;
+}
+.lowbar-right-line:hover > div:last-of-type {
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
   .lowbar-left > div:nth-of-type(2) {
     display: none;

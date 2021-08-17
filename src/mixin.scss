@@ -1,0 +1,30 @@
+@mixin line{
+    width: 60%;
+    border-bottom: 2px solid #a3a3a3;
+    position: relative;
+    >div:first-of-type{
+        width: 30%;
+        border-bottom: 2px solid #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    >div:last-of-type{
+        height: 7px;
+        width: 7px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: -2.5px;
+        left: 30%;
+        display: none;
+    }
+}
+@mixin line-hover{
+    >div:first-of-type{
+        border-bottom: 2px solid #b3ff34;
+    }
+    >div:last-of-type{
+        display: block;
+    }
+}

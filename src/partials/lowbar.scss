@@ -1,3 +1,5 @@
+@import "../mixin";
+
 .lowbar{
     position: fixed;
     top: calc(100% - 80px);
@@ -8,7 +10,6 @@
     &-left, &-right{
         width: 25%;
         height: 100%;
-        background-color: red;
         align-items: center;
     }
     &-left{
@@ -27,6 +28,9 @@
         }
         i:hover, >div:first-of-type >div:hover{
             color: #fff
+        }
+        i:first-of-type{
+            padding-right: 7px;
         }
     }
     &-center{
@@ -64,32 +68,10 @@
             align-items: center;
             justify-content: center;
             &-line{
-                width: 60%;
-                border-bottom: 1.5px solid #a3a3a3;
-                position: relative;
-                >div:first-of-type{
-                    width: 30%;
-                    border-bottom: 1.5px solid #fff;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-                // >div:last-of-type{
-                //     height: 3px;
-                //     width: 3px;
-                //     background-color: #fff;
-                //     border-radius: 50%;
-                //     position: absolute;
-                //     top: -1px;
-                //     left: 30%;
-                // }
+                @include line;
             }
             &-line:hover{
-                >div:first-of-type{
-                    // position: relative;
-                    top: -0.5px;
-                    border-bottom: 2px solid #b3ff34;
-                }
+                @include line-hover;
             }
             >div.color-white{
                 font-size: 10px;
@@ -103,11 +85,23 @@
         }
     }
     &-right{
-
+        justify-content: flex-end;
+        i{
+            color: #a3a3a3;
+            padding-right: 10px;
+            font-size: 12px;
+        }
+        i:hover{
+            color: #fff;
+        }
+        &-line{
+            @include line;
+        }
+        &-line:hover{
+            @include line-hover;
+        }
     }
 }
-
-
 
 // smartphone
 @media screen and (max-width: 768px){
@@ -119,6 +113,3 @@
 }
 // /smartphone
 
-// @media screen and (min-width: 769px) and (max-width: 991px){
-
-// }
